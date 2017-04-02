@@ -4,4 +4,21 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    ul
+      li My Text
+      input(type='text').class-name#id
+      //- var condition=true //variable
+      if condition
+        p It's True
+      - var anyArray=[1,2,3]
+      each value in anyArray
+        p= value
+
+      //Considers li. content as the same line
+      li.
+        jfahsdkfjhsh
+        djafhkajshadfkj
+        hkajdsfhjashdj
+
+    //calls the 1st parameter 'content' from the res.render
     block content
