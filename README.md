@@ -32,5 +32,9 @@ npm install
 
 * unistalling some npm library modules
 
-npm uninstall <library module name>
+npm uninstall < _library_module_name_ >
 
+#### Running Express-project
+Run the express project using following command
+
+npm start
