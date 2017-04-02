@@ -26,10 +26,11 @@ Description: My work while studing Node.js
 npm install express-generator -g
 
 * install dependencies mentioned in the package.json file
+Mention all the required dependencies in the package.json file then run the following command
 
 npm install
 
 * unistalling some npm library modules
 
-npm ins
+npm uninstall <library module name>
 
