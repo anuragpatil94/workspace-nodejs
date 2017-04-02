@@ -17,3 +17,19 @@ Description: My work while studing Node.js
 
 #### Tools Used
 * Intellij Idea WebStorm 2016
+
+
+#### Setup for express-node.js and commands using npm
+
+* express-generator to generate express projects in the current directory
+
+npm install express-generator -g
+
+* install dependencies mentioned in the package.json file
+
+npm install
+
+* unistalling some npm library modules
+
+npm ins
+
