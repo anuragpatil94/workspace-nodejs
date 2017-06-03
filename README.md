@@ -7,7 +7,7 @@ Name: Anurag Patil
 
 Date Started: 03-31-2017
 
-Description: My work while studing Node.js 
+Description: Studying Node.js 
 
 #### Technology Used
 * Node.js

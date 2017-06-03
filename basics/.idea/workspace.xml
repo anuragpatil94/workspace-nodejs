@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1df6d255-bd4e-4470-8517-e54bf62bb08d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09-express-mongodb/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09-express-mongodb/bin/www" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09-express-mongodb/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09-express-mongodb/public/stylesheets/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09-express-mongodb/routes/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09-express-mongodb/views/error.handlebars" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09-express-mongodb/views/index.handlebars" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09-express-mongodb/views/layouts/layout.handlebars" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../passport/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/08-validation-session/app.js" afterPath="$PROJECT_DIR$/08-express-validation-session/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/08-validation-session/bin/www" afterPath="$PROJECT_DIR$/08-express-validation-session/bin/www" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/08-validation-session/package.json" afterPath="$PROJECT_DIR$/08-express-validation-session/package.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/08-validation-session/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/08-express-validation-session/public/stylesheets/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/08-validation-session/routes/index.js" afterPath="$PROJECT_DIR$/08-express-validation-session/routes/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/08-validation-session/views/error.handlebars" afterPath="$PROJECT_DIR$/08-express-validation-session/views/error.handlebars" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/08-validation-session/views/index.handlebars" afterPath="$PROJECT_DIR$/08-express-validation-session/views/index.handlebars" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/08-validation-session/views/layouts/layout.handlebars" afterPath="$PROJECT_DIR$/08-express-validation-session/views/layouts/layout.handlebars" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/08-validation-session/views/test.handlebars" afterPath="$PROJECT_DIR$/08-express-validation-session/views/test.handlebars" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -316,6 +297,9 @@
     <ignored path="07-express-get-post-methods/node_modules/" />
     <ignored path="07-express-get-post-methods/npm-debug.log" />
     <ignored path="08-validation-session/node_modules/" />
+    <ignored path="../passport/node_modules/" />
+    <ignored path="08-express-validation-session/node_modules/" />
+    <ignored path="09-express-mongodb/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -691,7 +675,7 @@
       <workItem from="1491354069234" duration="469000" />
       <workItem from="1491354748905" duration="23000" />
       <workItem from="1491358937924" duration="328000" />
-      <workItem from="1491359600427" duration="3000" />
+      <workItem from="1491359600427" duration="109000" />
     </task>
     <task id="LOCAL-00001" summary="First Express App">
       <created>1491094114470</created>
@@ -742,11 +726,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491156017615</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="validation-session and mongodb">
+      <created>1491359695387</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1491359695387</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28901000" />
+    <option name="totallyTimeSpent" value="29007000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -781,7 +772,8 @@
     <MESSAGE value="Handlebars" />
     <MESSAGE value="get and post method" />
     <MESSAGE value="validation-session" />
-    <option name="LAST_COMMIT_MESSAGE" value="validation-session" />
+    <MESSAGE value="validation-session and mongodb" />
+    <option name="LAST_COMMIT_MESSAGE" value="validation-session and mongodb" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
