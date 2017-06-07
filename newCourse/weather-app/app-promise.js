@@ -4,6 +4,7 @@ const axios = require('axios');
 const argv = yargs
     .options({
         address: {
+            default:'New York',
             demand: true,
             alias: 'a',
             describe: 'Enter the Address to find weather',
