@@ -1,8 +1,18 @@
+/** For Heroku
+ * server.js
+ * Set Environmental variable instead of particular port while listening to the port
+ * SEE PORT variable which get environmetal variables for port or set a default
+ * 
+ * package.json
+ * add "start" script
+ */
+
 const express = require('express');
 const handlebars = require('handlebars');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials')
@@ -60,12 +70,19 @@ hbs.registerHelper('screamIt', (text) => {
 app.get('/', (req, res) => {
     res.render('home.hbs', {
         pageTitle: 'Home',
-        message: 'Welcome to our page'
+        message: 'Welcome to Home page'
     });
 });
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
         pageTitle: 'About',
+        message: 'Welcome to About page'
+    });
+});
+app.get('/projects', (req, res) => {
+    res.render('about.hbs', {
+        pageTitle: 'Projects',
+        message: 'Welcome to Projects page'
     });
 });
 app.get('/bad', (req, res) => {
@@ -74,6 +91,12 @@ app.get('/bad', (req, res) => {
     });
 });
 
-app.listen('3000', () => {
-    console.log('Server is up on localhost:3000');
+// On localhost
+// app.listen('3000', () => {
+//     console.log('Server is up on localhost:3000');
+// });
+
+//Heroku
+app.listen(port, () => {
+    console.log(`Server is up on localhost:${port}`);
 });
