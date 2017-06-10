@@ -10,16 +10,19 @@ const utils = require('./utils');
  * hence we have to specify thisas async test
  * hence we specify DONE argument..which means that test is not ocmpleted until done is called back
  */
-it('should add two numbers asyncronously', (done) => {
-    utils.asyncAdd(4, 3, (sum) => {
-        expect(sum).toBe(7).toBeA('number');
-        done();
+describe('async tests', () => {
+    it('should add two numbers asyncronously', (done) => {
+        utils.asyncAdd(4, 3, (sum) => {
+            expect(sum).toBe(7).toBeA('number');
+            done();
+        });
     });
-});
 
-it('should square two numbers asyncronously', (done) => {
-    utils.asyncSquare(4, (square) => {
-        expect(square).toBe(16).toBeA('number');
-        done();
+    it('should square two numbers asyncronously', (done) => {
+        utils.asyncSquare(4, (square) => {
+            expect(square).toBe(16).toBeA('number');
+            done();
+        });
     });
+
 });
