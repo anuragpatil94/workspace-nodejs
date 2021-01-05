@@ -9,7 +9,7 @@
   "author": "Anurag Patil",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "request": "^2.81.0",
     "yargs": "^8.0.1"
   }
