@@ -10,6 +10,10 @@ const app = express()
 // Logger
 app.use(morgan('dev'))
 
+// View Engine
+app.set('view engine', 'ejs')
+app.use(express.static('public'))
+
 // Routes
 app.use('/', require('./routes'))
 

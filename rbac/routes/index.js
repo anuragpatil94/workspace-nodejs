@@ -1,7 +1,7 @@
 const router = require('express').Router()
 
 router.get('/', (req, res, next) => {
-  res.send('Hello World!')
+  res.render('index')
 })
 
 router.use('/auth', require('./auth.route'))
