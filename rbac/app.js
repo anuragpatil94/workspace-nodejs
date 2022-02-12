@@ -11,9 +11,7 @@ const app = express()
 app.use(morgan('dev'))
 
 // Routes
-app.get('/', (req, res, next) => {
-  res.send('Working!')
-})
+app.use('/', require('./routes'))
 
 // Handling Errors
 app.use((req, res, next) => {
