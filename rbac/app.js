@@ -1,7 +1,9 @@
-const express = require('express')
+const connectFlash = require('connect-flash')
 const createHttpErrors = require('http-errors')
+const express = require('express')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
+const session = require('express-session')
 
 require('dotenv').config()
 
@@ -16,6 +18,25 @@ app.use(express.static('public'))
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+
+// Session
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      // secure:true   //only when using https server
+      httpOnly: true,
+    },
+  })
+)
+
+app.use(connectFlash())
+app.use((req, res, next) => {
+  res.locals.messages = req.flash()
+  next()
+})
 
 // Routes
 app.use('/', require('./routes'))
