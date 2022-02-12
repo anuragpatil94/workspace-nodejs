@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 
 app.use((error, req, res, next) => {
   error.status = error.status || 500
-  res.status(error.status).send(error)
+  res.status(error.status).render('error_40x', { error })
 })
 
 const PORT = process.env.PORT || 4001
