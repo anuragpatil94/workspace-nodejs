@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const { body, validationResult } = require('express-validator')
+const passport = require('passport')
 
 const User = require('../models/user.model')
 
@@ -7,12 +8,21 @@ router.get('/login', async (req, res, next) => {
   res.render('login')
 })
 
-router.post('/login', async (req, res, next) => {
-  res.send('Post Login')
-})
+router.post(
+  '/login',
+  passport.authenticate('local', {
+    successRedirect: '/user/profile',
+    failureRedirect: '/auth/login',
+    failureFlash: true,
+  }),
+  async (req, res, next) => {
+    res.send('Post Login')
+  }
+)
 
 router.get('/logout', async (req, res, next) => {
-  res.send('logout')
+  req.logout()
+  res.redirect('/')
 })
 
 router.get('/register', async (req, res, next) => {

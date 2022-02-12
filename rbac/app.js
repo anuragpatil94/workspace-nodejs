@@ -4,6 +4,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 const session = require('express-session')
+const passport = require('passport')
 
 require('dotenv').config()
 
@@ -31,6 +32,10 @@ app.use(
     },
   })
 )
+
+app.use(passport.initialize())
+app.use(passport.session())
+require('./utils/passport.auth')
 
 app.use(connectFlash())
 app.use((req, res, next) => {
