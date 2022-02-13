@@ -1,4 +1,4 @@
-const connectEnsureLogin = require('connect-ensure-login')
+const { ensureLoggedIn } = require('connect-ensure-login')
 const { roles } = require('../utils/constants')
 const router = require('express').Router()
 
@@ -8,14 +8,14 @@ router.get('/', (req, res, next) => {
 
 router.use(
   '/admin',
-  connectEnsureLogin.ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureAdmin,
   require('./admin.route')
 )
 router.use('/auth', require('./auth.route'))
 router.use(
   '/user',
-  connectEnsureLogin.ensureLoggedIn({
+  ensureLoggedIn({
     redirectTo: '/auth/login',
   }),
   require('./user.route')
