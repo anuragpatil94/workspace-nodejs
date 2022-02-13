@@ -3,6 +3,7 @@ const createHttpErrors = require('http-errors')
 const express = require('express')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
+const MongoStore = require('connect-mongo')
 const session = require('express-session')
 const passport = require('passport')
 
@@ -30,12 +31,18 @@ app.use(
       // secure:true   //only when using https server
       httpOnly: true,
     },
+    store: new MongoStore({ mongoUrl:`${process.env.MONGO_URI}/${process.env.MONGO_DB}` }),
   })
 )
 
 app.use(passport.initialize())
 app.use(passport.session())
 require('./utils/passport.auth')
+
+app.use((req, res, next) => {
+  res.locals.user = req.user
+  next()
+})
 
 app.use(connectFlash())
 app.use((req, res, next) => {
@@ -69,3 +76,4 @@ mongoose
       console.log(`Server is running on http://localhost:${PORT}`)
     })
   })
+  .catch((err) => console.log(err.message))
